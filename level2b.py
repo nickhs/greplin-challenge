@@ -1,6 +1,6 @@
 import level2
 
-def run(num):
+def answer(num):
     total = 0
     divider = 1
    

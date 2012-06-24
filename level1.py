@@ -1,5 +1,5 @@
-def foo(x):
-    f = open('/home/nick/gettysburg.txt')
+def answer(x):
+    f = open('gettysburg.txt')
     s = f.read()
     rs = s[::-1]
 
@@ -10,8 +10,6 @@ def foo(x):
         print sub
         for i in xrange(0, len(s)):
             if s[i:(i+x)] == sub:
-                print "yeah"
-                print sub
                 return sub
 
         y = y+1

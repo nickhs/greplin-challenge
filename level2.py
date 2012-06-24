@@ -14,7 +14,7 @@ def is_prime(num):
 
     return True
 
-def run(floor, start=0):
+def answer(floor, start=0):
     size = 5
 
     fibnums = []
