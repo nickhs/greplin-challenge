@@ -7,25 +7,19 @@ def fib(n):
         return fib(n-1)+fib(n-2)
 
 def is_prime(num):
-    num = num * 1.0
+    num = float(num)
     for divisor in xrange(2, int(num**0.5)+1):
-        if num/divisor == int(num/divisor):
+        if num % divisor == 0:
             return False
 
     return True
 
 def answer(floor, start=0):
-    size = 5
+    num = fib(start)
 
-    fibnums = []
+    if is_prime(num):
+        if num > floor:
+            return num
 
-    for i in xrange(start, start+size):
-        fibnums.append(fib(i))
-
-    for num in fibnums:
-        if is_prime(num):
-            if num > floor:
-                return num
-
-    return run(floor=floor, start=(start+size))
+    return answer(floor=floor, start=(start+1))
 
